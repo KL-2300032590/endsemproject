@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Saint-Carell";
+  src: url("./assets/fonts/SaintCarellClean_PERSONAL_USE_ONLY.otf")
+    format("truetype");
+}
+
+/* Remove default smooth scroll behavior */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Add custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ad59ce;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Add these to your existing styles */
+.video-fade-enter {
+  opacity: 0;
+}
+
+.video-fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.video-fade-exit {
+  opacity: 1;
+}
+
+.video-fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
